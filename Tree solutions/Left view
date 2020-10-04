@@ -1,1 +1,23 @@
+void left (node* root, int arr[], int height = 0)
+{
+  if (root ==0)
+  return;
+  if( arr[height]  ==  0)
+   {
+    cout<<root->data<<"";
+    arr[height] = 1;
+    
+   }
+   left( root->left,arr, height+1)
+   left(root->right,arr, height+1)
+ }
+ 
+ leftView(Node* root)
+ {
+   int arr[100] ={0};
+   left(root,arr);
+   
+ }
+   
+   
 
